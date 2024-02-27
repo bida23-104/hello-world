@@ -3,67 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Background Website</title>
+    <title>Speedstar Motors</title>
     <style>
-        body, html {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
         }
 
-        #video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            overflow: hidden;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        video {
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: -1;
+        .car-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .car {
+            width: 300px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
             text-align: center;
-            color: #fff;
-            z-index: 1;
         }
 
-        h1 {
-            font-size: 48px;
+        .car img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
 
-        p {
+        .car h2 {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+
+        .car p {
             font-size: 18px;
+            margin-top: 5px;
         }
     </style>
 </head>
 <body>
-    <div id="video-background">
-        <video autoplay muted loop>
-            <source src="background.mp4.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+    <div class="container">
+        <h1>Welcome to Speedstar Motors</h1>
+        <h2>Brand New Cars</h2>
+        <ul class="car-list">
+            <li class="car">
+                <img src="new_car1.jpg" alt="New Car 1">
+                <h2>New Car Model 1</h2>
+                <p>$50,000</p>
+            </li>
+            <li class="car">
+                <img src="new_car2.jpg" alt="New Car 2">
+                <h2>New Car Model 2</h2>
+                <p>$60,000</p>
+            </li>
+            <!-- Add more brand new cars as needed -->
+        </ul>
 
-    <div class="content">
-        <h1>Welcome to Our Website</h1>
-        <p>This is an example of a website with a video background.</p>
+        <h2>Pre-Owned Cars</h2>
+        <ul class="car-list">
+            <li class="car">
+                <img src="preowned_car1.jpg" alt="Pre-Owned Car 1">
+                <h2>Pre-Owned Car Model 1</h2>
+                <p>$30,000</p>
+            </li>
+            <li class="car">
+                <img src="preowned_car2.jpg" alt="Pre-Owned Car 2">
+                <h2>Pre-Owned Car Model 2</h2>
+                <p>$40,000</p>
+            </li>
+            <!-- Add more pre-owned cars as needed -->
+        </ul>
     </div>
 </body>
 </html>
